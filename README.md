@@ -2,6 +2,8 @@
 
 # MultiverSeg
 
+### [Project Page](https://multiverseg.csail.mit.edu) | [Paper](https://arxiv.org/abs/2412.15058) 
+
 Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance](https://arxiv.org/abs/2412.15058)
 
 [Hallee E. Wong](https://halleewong.github.io/), [Jose Javier Gonzalez Ortiz](https://josejg.com/), [John Guttag](https://people.csail.mit.edu/guttag/), [Adrian V. Dalca](http://www.mit.edu/~adalca/)
