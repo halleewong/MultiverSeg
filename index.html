@@ -1,1 +1,254 @@
-Hello World
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <meta name="description" content="MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance">
+    <meta name="keywords" content="MultiverSeg,Segmentation,Interactive,Context,In-Context,Medical,Annotation,Neural-Networks">
+    <title>MultiverSeg</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/d3e95fa766.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+<div class="jumbotron is-centered">
+
+  <div class="desktop-only">
+    <div class="container text-center">
+      <h1>MultiverSeg</h1>
+      <h3>Scalable Interactive Segmentation of Biomedical Imaging Datasets<br>with In-Context Guidance</h3>
+    </div>
+
+    <div class="table-like authors" style="justify-content:space-evenly;max-width:880px;margin:auto;margin-top:1em;">
+      <div>
+        <center>
+          <a href="https://halleewong.github.io/" style="font-size: larger">Hallee E. Wong</a>
+        </center>
+        <center>
+          MIT CSAIL & MGH
+        </center>
+      </div>
+      <div>
+        <center>
+          <a href="https://josejg.com/" style="font-size: larger">Jose Javier Gonzalez Ortiz</a>
+        </center>
+        <center>
+          Databricks Mosaic Research
+        </center>
+      </div>
+      <div>
+        <center>
+          <a href="https://people.csail.mit.edu/guttag/" style="font-size: larger">John Guttag</a>
+        </center>
+        <center>
+          MIT CSAIL
+        </center>
+      </div>
+      <div>
+        <center>
+          <a href="http://www.mit.edu/~adalca/" style="font-size: larger">Adrian V. Dalca</a>
+        </center>
+        <center>
+          MIT CSAIL & HMS, MGH
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-only">
+    <div class="container text-center">
+      <h1 style="font-size:13vw">MultiverSeg</h1>
+      <h3>Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance</h3>
+    </div>
+
+    <div class="table-like authors" style="justify-content:space-evenly;max-width:880px;margin:auto;margin-top:1em;">
+      <div>
+        <center>
+          <a href="https://halleewong.github.io/" style="font-size: larger; padding: 0em 2em">Hallee E. Wong</a>
+        </center>
+        <center>
+          MIT CSAIL & MGH
+        </center>
+      </div>
+      <div>
+        <center>
+          <a href="https://josejg.com/" style="font-size: larger">Jose Javier Gonzalez Ortiz</a>
+        </center>
+        <center>
+          Databricks Mosaic Research
+        </center>
+      </div>
+      <div>
+        <center>
+          <a href="https://people.csail.mit.edu/guttag/" style="font-size: larger; padding: 0em 2em">John Guttag</a>
+        </center>
+        <center>
+          MIT CSAIL
+        </center>
+      </div>
+      <div>
+        <center>
+          <a href="http://www.mit.edu/~adalca/" style="font-size: larger; padding: 0em 2em">Adrian V. Dalca</a>
+        </center>
+        <center>
+          MIT CSAIL & HMS, MGH
+        </center>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container is-centered">
+        <div class="row text-center">
+         
+        <a href="https://arxiv.org/abs/2312.07381" target="_blank">
+            <button class="button-link">
+            <i class="fa-regular fa-file-lines fa-lg" style="color: #ffffff;"></i>
+            &nbsp;Paper
+        </button>
+        </a>
+
+        <a href="https://github.com/halleewong/MultiverSeg" target="_blank">
+        <button class="button-link">
+            <i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i>
+            &nbsp;Code
+        </button>
+        </a>
+    </div>
+</div>
+
+<br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Overview</h2>
+    <hr/>
+    <p>
+      <b>MultiverSeg enables users to rapidly segment new biomedical imaging datasets.</b> 
+      The MultiverSeg network takes as input an image to segment and user interactions, along with a context set of previously segmented image-segmentation pairs (<b>left</b>). 
+    </p>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <img src="assets/teaser.png" alt="overview" style="display: block; margin: 0 auto;">
+      </div>
+    </div>
+    <br>
+    <p>
+      As the user completes more segmentations, those images and segmentations become additional inputs to the model, populating the context set. 
+      As the context set of labeled images grows, the number of interactions required to achieve an accurate segmentation decreases (<b>right</b>).
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Abstract</h2>
+    <hr/>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <p>
+          Medical researchers and clinicians often need to perform novel segmentation tasks on a set of related images. Existing methods for segmenting a new dataset are either interactive, requiring substantial human effort for each image, or require an existing set of manually labeled images. 
+          <br>
+          <br>
+          We introduce a system, <b>MultiverSeg</b>, that enables practitioners to rapidly segment an entire new dataset without requiring access to any existing labeled data from that task or domain. Along with the image to segment, the model takes user interactions such as clicks, bounding boxes or scribbles as input, and predicts a segmentation. As the user segments more images, those images and segmentations become additional inputs to the model, providing context. As the context set of labeled images grows, the number of interactions required to segment each new image decreases. 
+          <br>
+          <br>
+          We demonstrate that MultiverSeg enables users to interactively segment new datasets efficiently, by amortizing the number of interactions per image to achieve an accurate segmentation. Compared to using a state-of-the-art interactive segmentation method, using MultiverSeg reduced the total number of scribble steps by 53% and clicks by 36% to achieve 90 Dice on sets of images from unseen tasks. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Method</h2>
+    <hr/>
+    <p>
+      The MultiverSeg network (<b>left</b>) takes as input a stack of target image inputs and a context set of image-segmentation pairs. 
+      The target image inputs include the target image to segment, optional user interactions, and a previous predicted segmentation if available. 
+    </p>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <img src="assets/architecture.png" alt="architecture" style="display: block; margin: 0 auto;">
+      </div>
+    </div>
+    <br>
+    <p>
+      The architecture is comprised of an encoder-decoder structure similar to a UNet. 
+      We use a <a href=https://universeg.csail.mit.edu/>CrossBlock</a> mechanism (<b>right</b>) with additional normalization layers to interact the features of the target image inputs with the features of the context set inputs throughout the network.
+    </p>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Evaluation</h2>
+    <hr/>
+    <b>We evaluate different approaches to segmenting an entire new biomedical datasets</b>. We compare MultiverSeg to an interactive segmentation approach (<a href=https://scribbleprompt.csail.mit.edu/">ScribblePrompt</a>) as well as combining off-the-shelf models for in-context and interactive segmentation (SP+UVS). 
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <img src="assets/interactions-to-90-dice.png" alt="examples" style="display: block; margin: 0 auto;">
+      </div>
+    </div>
+    <br>
+    <p>
+      <b>MultiverSeg's interactive segmentation performance improves as more images are segmented</b> and added to the context set, demonstrating the model is able to use information from the context set to improve its predictions.
+    </p>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <img src="assets/interseg-in-context.png" alt="examples" style="display: block; margin: 0 auto;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Visualization</h2>
+    <hr/>
+    <p>
+      We show predictions from MultiverSeg and baselines for random examples given a context set of 10 previously segmented examples from the same unseen task and one correction click or scribble. 
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <img src="assets/qualitative-examples.png" alt="examples" style="display: block; margin: 0 auto;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Citation</h2>
+    <hr/>
+    <p>If you find our work or any of our materials useful, please cite our paper:</p>
+    <div class="alert alert-light citation">
+        @article{wong2024multiverseg,<br>
+          &nbsp;&nbsp;title={MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance},<br>
+          &nbsp;&nbsp;author={Hallee E. Wong and Jose Javier Gonzalez Ortiz and John Guttag and Adrian V. Dalca},<br>
+          &nbsp;&nbsp;year={2024},<br>
+    }
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+
+</body>
+</html>
