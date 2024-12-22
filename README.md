@@ -8,6 +8,8 @@ Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Bi
 
 [Hallee E. Wong](https://halleewong.github.io/), [Jose Javier Gonzalez Ortiz](https://josejg.com/), [John Guttag](https://people.csail.mit.edu/guttag/), [Adrian V. Dalca](http://www.mit.edu/~adalca/)
 
+![img](https://github.com/halleewong/MultiverSeg/blob/website/assets/teaser.png)
+
 # Roadmap
 
 We will release model weights and inference code by January 20th, 2025 
