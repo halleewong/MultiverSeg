@@ -12,7 +12,7 @@ Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Bi
 
 # Roadmap
 
-We will release model weights and inference code by January 20th, 2025 
+We will release model weights and inference code by January 27th, 2025 
 
 # Updates
 
