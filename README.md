@@ -10,13 +10,43 @@ Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Bi
 
 ![img](https://github.com/halleewong/MultiverSeg/blob/website/assets/teaser.png)
 
-# Roadmap
-
-We will release model weights and inference code by January 27th, 2025 
-
 # Updates
 
+* (2025-01-26) inference code and weights released
 * (2024-12-19) preprint released!
+
+# Models
+
+We provide pre-trained weights [here](https://www.dropbox.com/scl/fo/71j9vl3d4db0u229rq689/AI_5oDICnt0HnBcry-xJSNQ?rlkey=7y42638h12ilqds8270owzric&st=3py413ys&dl=0).
+
+# Installation
+
+## Installation
+
+You can install `multiverseg` in two ways:
+
+* **With pip**:
+
+```
+pip install git+https://github.com/halleewong/MultiverSeg.git
+```
+
+* **Manually**: cloning it and installing dependencies
+```
+git clone https://github.com/halleewong/MultiverSeg
+python -m pip install -r ./MultiverSeg/requirements.txt
+export PYTHONPATH="$PYTHONPATH:$(realpath ./MultiverSeg)"
+```
+
+# Getting Started
+
+First download the model checkpoints 
+```
+cd checkpoints
+./download.sh
+```
+
+Then see `./notebooks/inference.ipynb` for a tutorial. 
 
 # Acknowledgements
 
