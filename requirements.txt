@@ -7,6 +7,6 @@ matplotlib
 neurite
 scikit-image
 voxynth @ git+https://github.com/dalcalab/voxynth.git
-pylot @ git+https://github.com/JJGO/pylot.git@refs/pull/7/head
+pylot @ git+https://github.com/JJGO/pylot.git
 universeg @git+https://github.com/JJGO/UniverSeg.git
 scribbleprompt @ git+https://github.com/halleewong/ScribblePrompt.git
