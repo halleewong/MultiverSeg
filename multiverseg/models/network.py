@@ -11,8 +11,6 @@ import einops as E
 import torch
 from torch import nn
 
-from pylot.nn.norm import get_normlayer, NormType
-
 from universeg.nn.init import reset_conv2d_parameters
 from universeg.nn.vmap import Vmap, vmap
 from universeg.model import get_nonlinearity
@@ -25,6 +23,7 @@ from universeg.validation import (
 )
 
 from multiverseg.nn.cross_conv import FastCrossConv2d
+from multiverseg.nn.norm import get_normlayer, NormType
 
 @validate_arguments_init
 @dataclass(eq=False, repr=False)

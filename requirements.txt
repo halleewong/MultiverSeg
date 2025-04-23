@@ -1,5 +1,4 @@
 torch>=1.7
 numpy
-pylot @ git+https://github.com/JJGO/pylot.git
 universeg @git+https://github.com/JJGO/UniverSeg.git
 scribbleprompt @ git+https://github.com/halleewong/ScribblePrompt.git

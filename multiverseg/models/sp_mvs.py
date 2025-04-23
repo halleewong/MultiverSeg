@@ -8,10 +8,10 @@ import warnings
 import pathlib
 from typing import Optional
 
-from pylot.util import ShapeChecker
-
 from scribbleprompt.models.unet import ScribblePromptUNet, prepare_inputs
+
 from multiverseg.models.network import MultiverSegNet
+from multiverseg.util.shapecheck import ShapeChecker
 
 checkpoint_dir = pathlib.Path(os.path.realpath(__file__)).parent.parent.parent / "checkpoints"
 
