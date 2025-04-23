@@ -25,7 +25,12 @@ class MultiverSeg(nn.Module):
         super().__init__()
 
         if device is None:
-            device = "cuda" if torch.cuda.is_available() else "cpu"
+            if torch.cuda.is_available():
+                self.device = torch.device("cuda")
+            elif torch.backends.mps.is_available():
+                self.device = torch.device("mps")
+            else:
+                self.device = torch.device("cpu")
 
         self.version = version
         self.device = device
@@ -39,7 +44,7 @@ class MultiverSeg(nn.Module):
             cross_relu=True
         ).to(self.device)
         self.multiverseg.load_state_dict(
-            torch.load(self.weights)["model"]
+            torch.load(self.weights, map_location=self.device)["model"]
         )
 
         self.scribbleprompt = ScribblePromptUNet(version='v1', device=self.device)
