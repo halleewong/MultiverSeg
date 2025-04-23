@@ -2,7 +2,7 @@
 Differences from https://github.com/JJGO/UniverSeg/blob/main/universeg/model.py
 * Options for different normalization
 * Options for different skip connections
-* replaced CrossConv with faster version from multiversegdev.nn.cross_conv_fast
+* replaced CrossConv with faster version 
 """
 from dataclasses import dataclass
 from typing import Any, Dict, List, Literal, Optional, Tuple, Union
