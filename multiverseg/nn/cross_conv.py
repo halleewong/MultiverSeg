@@ -8,7 +8,6 @@ import einops as E
 from typing import Union, Tuple, Optional
 from pydantic import validate_arguments
 
-from pylot.util.shapecheck import ShapeChecker
 import torch.nn.functional as F
 
 class FastCrossConv2d(nn.Conv2d):
