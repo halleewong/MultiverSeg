@@ -1,4 +1,5 @@
 torch>=1.7
 numpy
+tabulate
 universeg @git+https://github.com/JJGO/UniverSeg.git
 scribbleprompt @ git+https://github.com/halleewong/ScribblePrompt.git
