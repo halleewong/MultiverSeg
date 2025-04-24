@@ -26,11 +26,11 @@ class MultiverSeg(nn.Module):
 
         if device is None:
             if torch.cuda.is_available():
-                self.device = torch.device("cuda")
+                device = torch.device("cuda")
             elif torch.backends.mps.is_available():
-                self.device = torch.device("mps")
+                device = torch.device("mps")
             else:
-                self.device = torch.device("cpu")
+                device = torch.device("cpu")
 
         self.version = version
         self.device = device
