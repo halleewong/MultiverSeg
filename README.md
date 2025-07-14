@@ -4,7 +4,7 @@
 
 ### [Project Page](https://multiverseg.csail.mit.edu) | [Paper](https://arxiv.org/abs/2412.15058) 
 
-Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance](https://arxiv.org/abs/2412.15058)
+Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance](https://arxiv.org/abs/2412.15058) accepted at ICCV 2025
 
 [Hallee E. Wong](https://halleewong.github.io/), [Jose Javier Gonzalez Ortiz](https://josejg.com/), [John Guttag](https://people.csail.mit.edu/guttag/), [Adrian V. Dalca](http://www.mit.edu/~adalca/)
 
@@ -12,6 +12,8 @@ Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Bi
 
 ## Updates
 
+* (2025-07-01) Checkout the 3DSlicer extension: https://github.com/dalcalab/SlicerMultiverSeg
+* (2025-06-25) MultiverSeg was accepted to ICCV 2025!
 * (2025-01-26) inference code and weights released
 * (2024-12-19) preprint released!
 
