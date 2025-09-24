@@ -18,10 +18,11 @@ checkpoint_dir = pathlib.Path(os.path.realpath(__file__)).parent.parent.parent /
 class MultiverSeg(nn.Module):
 
     weights = {
-        "v0": checkpoint_dir / "MultiverSeg_v0_nf256_res128.pt"
+        "v0": checkpoint_dir / "MultiverSeg_v0_nf256_res128.pt", # ArXiv Dec 2024 checkpoint
+        "v1": checkpoint_dir / "MultiverSeg_v1_nf256_res128.pt" # ICCV 2025 checkpoint
     }
 
-    def __init__(self, version: str = "v0", min_context: int = 1, device = None):
+    def __init__(self, version: str = "v1", min_context: int = 1, device = None):
         super().__init__()
 
         if device is None:
