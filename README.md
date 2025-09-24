@@ -1,4 +1,6 @@
 <a href=https://arxiv.org/abs/2412.15058><img src="https://img.shields.io/badge/arxiv-2312.07381-orange?logo=arxiv&logoColor=white"/></a>
+<a href=https://github.com/dalcalab/SlicerMultiverSeg><img src="https://img.shields.io/badge/3D Slicer Extension-SlicerMultiverSeg-blue"/></a>
+
 
 # MultiverSeg
 
@@ -12,14 +14,20 @@ Official implementation of [MultiverSeg: Scalable Interactive Segmentation of Bi
 
 ## Updates
 
-* (2025-07-01) Checkout the 3DSlicer extension: https://github.com/dalcalab/SlicerMultiverSeg
+* (2025-09-24) released `v1` weights used in the ICCV paper
+* (2025-08-31) ICCV camera-ready [posted on arxiv](https://arxiv.org/abs/2412.15058) with additional evaluations on TotalSegmentator and more baselines  
+* (2025-07-01) 3D Slicer extension developed by Kitware Inc. released: https://github.com/dalcalab/SlicerMultiverSeg
 * (2025-06-25) MultiverSeg was accepted to ICCV 2025!
-* (2025-01-26) inference code and weights released
-* (2024-12-19) preprint released!
+* (2025-01-26) inference code and `v0` weights released
+* (2024-12-19) arxiv preprint released!
 
 ## Models
 
-We provide pre-trained weights [here](https://www.dropbox.com/scl/fo/71j9vl3d4db0u229rq689/AI_5oDICnt0HnBcry-xJSNQ?rlkey=7y42638h12ilqds8270owzric&st=3py413ys&dl=0).
+We provide pre-trained weights [here](https://www.dropbox.com/scl/fo/71j9vl3d4db0u229rq689/AI_5oDICnt0HnBcry-xJSNQ?rlkey=7y42638h12ilqds8270owzric&st=3py413ys&dl=0). 
+
+* `v0`: initial release (shorter training schedule).
+
+* `v1`: trained for longer, with improved performance. These are the weights used in the ICCV 2025 paper.
 
 ## Installation
 
@@ -56,10 +64,10 @@ This project builds extensively on code originally developed for [ScribblePrompt
 
 If you find our work or any of our materials useful, please cite our paper:
 ```
-@article{wong2024multiverseg,
+@article{wong2025multiverseg,
   title={MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance},
   author={Hallee E. Wong and Jose Javier Gonzalez Ortiz and John Guttag and Adrian V. Dalca},
-  journal={arXiv preprint arXiv:2412.15058},
-  year={2024},
+  journal={International Conference on Computer Vision},
+  year={2025},
 }
 ```
